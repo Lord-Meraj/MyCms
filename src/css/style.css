@@ -57,7 +57,7 @@
 	--color-border-focus:#F09819;
 	--color-border:#d3d6db;
 	--bs:#ffa857;
-	--color-button:#f8e7e7;
+	--color-a:#f8e7e7;
 	--color-percentage:#5f6769;
 	--color-header-light:#9ba6a5;
 	--color-border-focus:#F09819;
@@ -114,9 +114,9 @@ picture {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and as */
 input,
-button,
+a,
 textarea,
 select {
   font: inherit;
@@ -171,7 +171,7 @@ body {
 	padding: 2.5rem .5rem 2rem .5rem;
 }
 
-.sidebar button {
+.sidebar a {
 	color: inherit;
 	background: transparent;
 	height: 60px;
@@ -209,11 +209,11 @@ body {
 	width: 100%;
 }
 
-.sidebar > nav button:last-child {
+.sidebar > nav a:last-child {
 	margin-top: auto;
 }
 
-.sidebar button > span {
+.sidebar a > span {
 	display: flex;
 	align-items: center;
 	grid-gap: .9rem;
@@ -223,7 +223,7 @@ body {
 	line-height: 1;
 }
 
-.sidebar button:hover > span {
+.sidebar a:hover > span {
 	background: #f2f2f2;
 }
 
@@ -240,25 +240,25 @@ body {
 		width: 73px;
 	}
 	
-	.sidebar button > span > span {
+	.sidebar a > span > span {
 		opacity: 0;
 		visibility: hidden;
 	}
 }
 
-.sidebar button i {
+.sidebar a i {
 	position: relative;
 	font-size: var(--step-0);
 }
 
-.sidebar button img {
+.sidebar a img {
 		width: 28px;
 		height: 28px;
     border-radius: 50%;
 		transition: .2s;
 }
 
-.sidebar button > span > i span {
+.sidebar a > span > i span {
 	position: absolute;
 	top: -6px;
 	right: -12px;
@@ -275,7 +275,7 @@ body {
 	padding: 0 5px;
 }
 
-.sidebar button > span > i em {
+.sidebar a > span > i em {
 	position: absolute;
 	top: 1px;
 	right: -2px;
@@ -286,10 +286,11 @@ body {
 	border: 1px solid #fff;
 }
 
-.sidebar button > span {
+.sidebar a > span {
 	font-size: var(--step--1);
 	font-weight: 400;
 }
 
-
-
+.Content {
+    padding-left: 260px;
+}

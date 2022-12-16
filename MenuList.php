@@ -39,68 +39,64 @@ require_once 'dbconfig.php';
             if ($query->rowCount() > 0) {
                 foreach ($results as $result) {
             ?>
-            <button>
+            <a href="#">
                 <span>
                     <i class="fa <?php echo htmlentities($result->IconClass) ?>"></i>
                     <span>
                         <?php echo htmlentities($result->Title) ?>
                     </span>
                 </span>
-            </button>
+            </a>
             <?php
                     $id++;
                 }
             }
             ?>
-            <!-- <button>
-                <span>
-                    <i class="fa fa-search"></i>
-                    <span>Search</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <i class="fa fa-compass"></i>
-                    <span>Explore</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <i class="fa fa-location-arrow">
-                        <span>13</span>
-                    </i>
-                    <span>Messages</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <i class="fa fa-heart">
-                        <em></em>
-                    </i>
-                    <span>Notifications</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <i class="fa fa-plus"></i>
-                    <span>Create</span>
-                </span>
-            </button>
-            <button>
-                <span>
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzAqKERFeE4h-K3vnOWQSWJmxRTKTApVjEg&usqp=CAU">
-                    <span>Profile</span>
-                </span>
-            </button> -->
-            <button>
+            <a href="#">
                 <span>
                     <i class="fa fa-bars"></i>
                     <span>More</span>
                 </span>
-            </button>
+            </a>
         </nav>
     </div>
+
+    <div class="Content">
+        <table class="table table-striped text-center">
+            <thead>
+                <tr>
+                    <th>ردیف</th>
+                    <th>عنوان</th>
+                    <th>ترتیب</th>
+                    <th>ایکون</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+
+
+            $idd = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {
+            ?>
+                <tr>
+                    <td><?php echo $idd ?></td>
+                    <td><?php echo $result->Title ?></td>
+                    <td><?php echo $result->Order ?></td>
+                    <td><?php echo $result->IconClass ?></td>
+                </tr>
+                <?php
+                    $idd++;
+                }
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 </body>
 
