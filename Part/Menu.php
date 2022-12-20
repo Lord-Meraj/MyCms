@@ -1,32 +1,32 @@
 <div class="sidebar">
         <header class="sidebar_header">
-            <p>CMS</p>
+            <p>Meraj CMS</p>
             <i class="fa fa-instagram"></i>
         </header>
         <nav class="sidebar_menu">
             <?php
 
-            // $sql = "SELECT * FROM Menu";
-            // $query = $conn->prepare($sql);
-            // $query->execute();
-            // $results = $query->fetchAll(PDO::FETCH_OBJ);
+            $sql = "SELECT * FROM Menu";
+            $query = $conn->prepare($sql);
+            $query->execute();
+            $results = $query->fetchAll(PDO::FETCH_OBJ);
 
-            // $id = 1;
-            // if ($query->rowCount() > 0) {
-            //     foreach ($results as $result) {
+            $id = 1;
+            if ($query->rowCount() > 0) {
+                foreach ($results as $result) {
             ?>
-            <!-- <button>
+            <a>
                 <span>
-                    <i class="fa <?php // echo htmlentities($result->IconClass) ?>"></i>
+                    <i class="fa <?php echo htmlentities($result->IconClass) ?>"></i>
                     <span>
-                        <?php // echo htmlentities($result->Title) ?>
+                        <?php  echo htmlentities($result->Title) ?>
                     </span>
                 </span>
-            </button> -->
+                </a>
             <?php
-            //         $id++;
-            //     }
-            // }
+                    $id++;
+                }
+            }
             ?>
             <!-- <button>
                 <span>
@@ -61,19 +61,19 @@
                     <i class="fa fa-plus"></i>
                     <span>Create</span>
                 </span>
-            </button>
-            <button>
+            </button> -->
+            <a>
                 <span>
                     <img
                         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzAqKERFeE4h-K3vnOWQSWJmxRTKTApVjEg&usqp=CAU">
                     <span>Profile</span>
                 </span>
-            </button> -->
-            <button>
+        </a>
+            <a>
                 <span>
                     <i class="fa fa-bars"></i>
                     <span>More</span>
                 </span>
-            </button>
+        </a>
         </nav>
     </div>
