@@ -40,6 +40,12 @@ require_once '../Part/Menu.php';
                                             <input type="text" name="IconClass" class="form-control">
                                         </div>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">لینک</label>
+                                            <input type="text" name="Link" class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
@@ -59,6 +65,7 @@ require_once '../Part/Menu.php';
                     <th>عنوان</th>
                     <th>ترتیب</th>
                     <th>ایکون</th>
+                    <th>لینک</th>
                     <th>تنظیمات</th>
                 </tr>
             </thead>
@@ -79,6 +86,7 @@ require_once '../Part/Menu.php';
                             <td><?php echo htmlentities($result->Title) ?></td>
                             <td><?php echo htmlentities($result->SortOrder) ?></td>
                             <td><?php echo htmlentities($result->IconClass) ?></td>
+                            <td><?php echo htmlentities($result->Link) ?></td>
                             <td>
                                 <!-- Modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo htmlentities($result->Id) ?>">
@@ -114,6 +122,12 @@ require_once '../Part/Menu.php';
                                                                 <input type="text" name="IconClass" value="<?php echo htmlentities($result->IconClass) ?>" class="form-control">
                                                             </div>
                                                         </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="">لینک</label>
+                                                                <input type="text" name="Link" class="form-control">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
@@ -144,14 +158,13 @@ require_once '../Part/Menu.php';
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" onclick="RemoveMenu(<?php echo htmlentities($result->Id)?>)" class="btn btn-danger">Remove</button>
+                                                <button type="button" onclick="RemoveMenu(<?php echo htmlentities($result->Id) ?>)" class="btn btn-danger">Remove</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-
                 <?php
                         $id++;
                     }

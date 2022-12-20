@@ -14,7 +14,7 @@ if (!$conn) {
 }
 try {
 
-    // $sql = "DELETE FROM `menu` WHERE Id=$id";
+    $sql = "DELETE FROM `menu` WHERE Id=$id";
 
     $query = $conn->prepare($sql);
     $query->execute();
