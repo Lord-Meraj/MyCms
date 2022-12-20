@@ -1,34 +1,34 @@
 <div class="sidebar">
-        <header class="sidebar_header">
-            <p>Meraj CMS</p>
-            <i class="fa fa-instagram"></i>
-        </header>
-        <nav class="sidebar_menu">
-            <?php
+    <header class="sidebar_header">
+        <p>Meraj CMS</p>
+        <i class="fa fa-instagram"></i>
+    </header>
+    <nav class="sidebar_menu">
+        <?php
 
-            $sql = "SELECT * FROM Menu";
-            $query = $conn->prepare($sql);
-            $query->execute();
-            $results = $query->fetchAll(PDO::FETCH_OBJ);
+        $sql = "SELECT * FROM Menu ORDER BY SortOrder";
+        $query = $conn->prepare($sql);
+        $query->execute();
+        $results = $query->fetchAll(PDO::FETCH_OBJ);
 
-            $id = 1;
-            if ($query->rowCount() > 0) {
-                foreach ($results as $result) {
-            ?>
-            <a href="<?php echo htmlentities($result->Link) ?>">
-                <span>
-                    <i class="fa <?php echo htmlentities($result->IconClass) ?>"></i>
+        $id = 1;
+        if ($query->rowCount() > 0) {
+            foreach ($results as $result) {
+        ?>
+                <a href="<?php echo htmlentities($result->Link) ?>">
                     <span>
-                        <?php  echo htmlentities($result->Title) ?>
+                        <i class="fa <?php echo htmlentities($result->IconClass) ?>"></i>
+                        <span>
+                            <?php echo htmlentities($result->Title) ?>
+                        </span>
                     </span>
-                </span>
                 </a>
-            <?php
-                    $id++;
-                }
+        <?php
+                $id++;
             }
-            ?>
-            <!-- <button>
+        }
+        ?>
+        <!-- <button>
                 <span>
                     <i class="fa fa-search"></i>
                     <span>Search</span>
@@ -62,18 +62,23 @@
                     <span>Create</span>
                 </span>
             </button> -->
-            <a>
-                <span>
-                    <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzAqKERFeE4h-K3vnOWQSWJmxRTKTApVjEg&usqp=CAU">
-                    <span>Profile</span>
-                </span>
+        <a>
+            <span>
+                <img src="/MYCMS/src/images/User.jpg">
+                <?php
+                if (isset($_COOKIE["Userlogin"])) {
+                    echo $_COOKIE["Userlogin"];
+                }else{
+                   echo "<span>Profile</span>";
+                }
+                ?>
+            </span>
         </a>
-            <a>
-                <span>
-                    <i class="fa fa-bars"></i>
-                    <span>More</span>
-                </span>
+        <a>
+            <span>
+                <i class="fa fa-bars"></i>
+                <span>More</span>
+            </span>
         </a>
-        </nav>
-    </div>
+    </nav>
+</div>

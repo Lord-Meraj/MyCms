@@ -72,7 +72,7 @@ require_once '../Part/Menu.php';
             <tbody>
                 <?php
 
-                $sql = "SELECT * FROM Menu";
+                $sql = "SELECT * FROM Menu ORDER BY SortOrder";
                 $query = $conn->prepare($sql);
                 $query->execute();
                 $results = $query->fetchAll(PDO::FETCH_OBJ);
@@ -125,7 +125,7 @@ require_once '../Part/Menu.php';
                                                         <div class="col-md-12">
                                                             <div class="form-group">
                                                                 <label for="">لینک</label>
-                                                                <input type="text" name="Link" class="form-control">
+                                                                <input type="text" name="Link"  value="<?php echo htmlentities($result->Link) ?>" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
