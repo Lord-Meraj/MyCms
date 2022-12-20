@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 19, 2022 at 05:30 PM
+-- Generation Time: Dec 20, 2022 at 02:33 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `mycms`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `menu`
+--
+
+DROP TABLE IF EXISTS `menu`;
+CREATE TABLE IF NOT EXISTS `menu` (
+  `Id` int(100) NOT NULL AUTO_INCREMENT,
+  `Title` varchar(100) COLLATE utf8_polish_ci NOT NULL,
+  `IconClass` varchar(100) COLLATE utf8_polish_ci NOT NULL,
+  `SortOrder` int(100) NOT NULL,
+  `Link` varchar(100) COLLATE utf8_polish_ci NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Dumping data for table `menu`
+--
+
+INSERT INTO `menu` (`Id`, `Title`, `IconClass`, `SortOrder`, `Link`) VALUES
+(32, 'MenuEdit', 'fa-list', 7, '/MyCms/admin/menulist'),
+(28, 'Search', 'fa-Search', 2, '#'),
+(31, 'Home', 'fa-Home', 1, '/MyCms'),
+(33, 'Login', 'fa-user', 10, '/MyCms/login'),
+(34, 'logout', 'fa-user-times', 9, '/MyCms/logout');
 
 -- --------------------------------------------------------
 
