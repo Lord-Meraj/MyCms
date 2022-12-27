@@ -10,9 +10,8 @@ use LDAP\Result;
 
         $cookie_name = "Userlogin";
         if (isset($_COOKIE[$cookie_name])) {
-            // $cookie_value = $results[0]->Fname . " " . $results[0]->Lname;
-            // $cookie_value = "Meraj Parhizkari";
             setcookie($cookie_name, null, -1,'/');
+            session_destroy();
             header("Location:/mycms/login");
         }
         require_once 'Part/Menu.php';

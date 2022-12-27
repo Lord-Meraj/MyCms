@@ -24,13 +24,11 @@ if (isset($_POST["Email"])) {
         $query->execute();
         $results = $query->fetchAll(PDO::FETCH_OBJ);
        if(isset($results[0])){
-
            $cookie_name = "Userlogin";
            if (!isset($_COOKIE[$cookie_name])) {
                $cookie_value = $results[0]->Fname." ".$results[0]->Lname;
-               // $cookie_value = "Meraj Parhizkari";
                setcookie($cookie_name, $cookie_value, time() + 60, "/");
-            //    echo "<h4 class='text-success'>با موفقیت وارد شدید !</h4>";
+               $_SESSION["UserRoleId"] = $results[0]->RoleID;
             header("Location:/mycms");
             }
         }else{
