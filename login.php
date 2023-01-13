@@ -27,7 +27,7 @@ if (isset($_POST["Email"])) {
            $cookie_name = "Userlogin";
            if (!isset($_COOKIE[$cookie_name])) {
                $cookie_value = $results[0]->Fname." ".$results[0]->Lname;
-               setcookie($cookie_name, $cookie_value, time() + 60, "/");
+               setcookie($cookie_name, $cookie_value, time() + 240, "/");
                $_SESSION["UserRoleId"] = $results[0]->RoleID;
             header("Location:/mycms");
             }

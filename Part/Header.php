@@ -6,7 +6,7 @@ require_once 'dbconfig.php';
 
 
 
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
     <title style="color: brown">Sidebar 6</title>
@@ -20,6 +20,9 @@ require_once 'dbconfig.php';
     <link rel="stylesheet" href="/MYCMS/src/lib/node_modules/bootstrap/dist/css/bootstrap.rtl.min.css">
     <!-- <link rel="stylesheet" href="src/css/style.css"> -->
     <link rel="stylesheet" href="/MYCMS/src/css/style.css">
+    <link rel="stylesheet" href="/MYCMS/src/lib/node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/MYCMS/src/font/css/custom.css">
+
 </head>
 
 <body>

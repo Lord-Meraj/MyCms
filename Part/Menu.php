@@ -1,6 +1,6 @@
 <div class="sidebar">
     <header class="sidebar_header">
-        <p>Meraj CMS</p>
+        <p class="text-end">Meraj CMS</p>
         <i class="fa fa-instagram"></i>
     </header>
     <nav class="sidebar_menu">
