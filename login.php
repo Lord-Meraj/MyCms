@@ -75,6 +75,10 @@ require_once 'Part/Menu.php';
         </form>
     </div>
 </div>
+<div class="m-5">
+    <p>Meraj@gmail.com</p>
+    <p>123456</p>
+</div>
 <?php
 require_once 'Part/Footer.php';
 ?>

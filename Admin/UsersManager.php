@@ -5,12 +5,11 @@ require_once '../Part/Menu.php';
 
 <div class="Content">
     <div class="maindata p-5">
-        <div class="addRow">
-            <!-- Modal -->
+        <!-- <div class="addRow">
+  
             <button type="button" class="btn btn-success mt-3 mb-3" data-bs-toggle="modal" data-bs-target="#AddRow">
                 Add
             </button>
-            <!-- Modal -->
             <div class="modal fade" id="AddRow" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <form action="/MYCMS/Admin/Action/AddMenu.php" method="POST">
@@ -30,7 +29,7 @@ require_once '../Part/Menu.php';
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <table class="table table-striped text-center table-bordered">
             <thead>
